@@ -1,0 +1,172 @@
+// Variables
+$color-primary : #171717;
+$color-secondary: #444444;
+$color-focus: #DA0037;
+$color-white: #DADADA;
+$color-yellow: yellow;
+$color-shaded: rgba(68, 68, 68, 0.8);
+
+// Body and Page Composition
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.paper {
+  background-color: $color-white;
+}
+
+.loader-background{
+  position: absolute;
+  top: 0;
+  background-color: rgba(44,44,44,0.4);
+  width: 100%;
+  height: 100%;
+  z-index: 1100;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+//Spacing & Element Disposition
+
+.centered-grid{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Components
+
+.p-button.p-button{
+  color: $color-white;
+  text-transform: capitalize;
+}
+
+#navigation-bar{
+  .movie-icon{
+    font-size: 90px;
+    color: yellow;
+  }
+
+  // Search field style overrides
+  .search-field > div > input {
+    color: $color-white;
+  }
+  .search-field > label{
+    color: $color-white;
+  }
+  .search-field > div > fieldset {
+    border-color: $color-white;
+  }
+}
+
+#movies-home{
+  background-color: $color-secondary;
+  height: 100em;
+
+  .header-title{
+    margin-top: 5px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    font-size: 22px;
+    color: $color-white;
+    font-family: monospace;
+  }
+
+  .genre-container{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 15px;
+  }
+
+  .filter-select{
+    width: 100px;
+  }
+
+  .filter-input > div{
+    margin-top: 0px;
+  }
+
+  .filter-select-text{
+    line-height: 2.0;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  .movie-carousel > button{
+    color: $color-primary;
+    background-color: $color-primary;
+  }
+  .movie-carousel > button.slick-prev{
+    z-index: 1000;
+    left: 10px;
+  }
+  .movie-carousel > button.slick-next{
+    right: 10px;
+  }
+
+  .movie-card {
+    height: 35em;
+    display: flex;
+    align-items: flex-end;
+    align-content: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .movie-card-title{
+    font-size: 35px;
+    font-family: monospace;
+  }
+
+  .movie-card-content{
+    background-color: $color-shaded;
+    width: 100%;
+  }
+
+  .movie-card-favourite{
+    position: relative;
+    left: 80%;
+  }
+}
+
+
+
+#prlx{
+  height: 150px;
+
+  .prlx-paper {
+    background-color: $color-primary;
+    padding: 0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .prlx-tabs{
+
+  }
+  .prlx-tabs-indicator{
+    background-color: $color-focus;
+  }
+  .prlx-tab{
+    text-transform: capitalize;
+    color: $color-white;
+  }
+}
